@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<%- include('../partials/head'); %>
+
+    <body>
+        <%- include('../partials/menu'); %>
+        
+        <div class="page">
+            <h1>Baskets page</h1>
+            <div class="basketContainer">
+                    <% 
+                        if(data){  
+                            for(let d of data) { 
+                                %>
+                                    <div class="card cardCustom" style="width: 400px;  margin : 10px; padding:10px">
+                                        <img src="data:image/png;base64,<%=d.user.image%>" class="card-img-top" alt="<%= d.user.name %>"
+                                            style="width: 150px;">
+                                        <div class="card-body" style="position: relative;">
+                                            <h5 class="card-title">
+                                                <%= d.user.name %>
+                                            </h5>
+
+                                            <h6>Product Basket</h6>
+                                            <% 
+                                                for(let p of d.basket){
+                                                    %>
+                                                        <div class="basketContainerProduct">
+                                                            <div style="flex:3">
+                                                                <img src="data:image/png;base64,<%=p.productDetails.image%>" class="card-img-top" alt="<%= p.productDetails.name %>"
+                                                                    style="width: auto; height: 80px;">
+                                                            </div>
+                                                            <div style="flex:5">
+                                                                <p>Product : <%= p.productDetails.name %></p>
+                                                                <p>Quantity : <%= p.quantity %>  </p>
+                                                            </div>
+                                                        </div>
+                                                    <%
+                                                }
+                                            %>
+                                        
+                                        </div>
+                                    </div>
+                                <% 
+                            } 
+                        }else{ 
+                            %>
+                                <p>Empty</p>
+                            <% 
+                        } 
+                    %>
+            </div>
+        </div>
+    </body>
+
+</html>

@@ -49,6 +49,7 @@ typings/
 
 # Optional npm cache directory
 .npm
+**/package-lock.json
 
 # Optional eslint cache
 .eslintcache
@@ -102,3 +103,33 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Xcode
+#
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+
+# Android/IntelliJ
+#
+build/
+**/fonts/*.ttf
+*/.gitignore
+.idea
+.gradle
+local.properties
+*.iml
+

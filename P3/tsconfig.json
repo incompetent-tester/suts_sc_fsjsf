@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+      "module": "ES6",
+      "strict": true,
+      "noImplicitAny": true,
+      "removeComments": true,
+      "sourceMap": true,
+      "outDir": "./build",
+      "moduleResolution": "node",
+      "allowSyntheticDefaultImports": true
+    },
+    "files": [ "./src/App.ts" ]
+}

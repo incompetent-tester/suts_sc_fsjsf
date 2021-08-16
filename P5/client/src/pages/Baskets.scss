@@ -1,0 +1,11 @@
+
+.basketContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.basketContainerProduct{
+    display: flex;
+    padding: 10px 0 10px 0;
+}
