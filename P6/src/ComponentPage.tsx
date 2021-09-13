@@ -1,5 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
+import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
+
 import { Button, ActivityIndicator, View, FlatList, Text, StyleSheet, TextInput, Switch, Linking } from 'react-native';
 
 interface ListItem {
@@ -62,6 +64,18 @@ const ComponentPage = () => {
                 onPress={
                     () => 
                         Linking.openURL('https://reactnative.dev/docs/components-and-apis ')
+                }
+                />
+        </View>
+
+        <View style={styles.container}>
+            <Text>Camera Native Module</Text>
+            <Button 
+                title="Camera Native Module"
+                onPress={
+                    () => launchCamera(
+                        {mediaType : 'photo'}, 
+                        (response) => { console.log(response) })
                 }
                 />
         </View>
